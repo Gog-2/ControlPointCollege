@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a4210d0fd2a5e2147b135ade7ce87564
+guid: 95db7036dd24e9341abf50f6707edd06
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 133982719826790466
-    second: Untitled_0
+      213: 1081734080581997953
+    second: apple-1024x683.jpeg_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Untitled_0
+      name: apple-1024x683.jpeg_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 907
-        height: 60
+        width: 1024
+        height: 683
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2480155e2900cd100800000000000000
-      internalID: 133982719826790466
+      spriteID: 185168e3a67130f00800000000000000
+      internalID: 1081734080581997953
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Untitled_0: 133982719826790466
+      apple-1024x683.jpeg_0: 1081734080581997953
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

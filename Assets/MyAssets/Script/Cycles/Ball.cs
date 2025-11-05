@@ -8,8 +8,8 @@ public class Ball : MonoBehaviour
     [SerializeField]private Rigidbody2D _rb;
     [SerializeField]private float _threshold = 13;
     [SerializeField] private float _force = 3;
-    private static  float _timeBelowThreshold = 0f;
-    private static  bool _haveSpeed = true;
+    private float _timeBelowThreshold = 0f;
+    private bool _haveSpeed = true;
     
     void Start()
     {
@@ -21,12 +21,14 @@ public class Ball : MonoBehaviour
         if (speed < threshold)
         {
             _spriteRenderer.color = Color.red;
+            _timeBelowThreshold += Time.deltaTime;
+            print(_timeBelowThreshold);
         }
         else
         {
             _spriteRenderer.color = Color.white;
+            _timeBelowThreshold = 0f;
         }
-        Debug.Log($"Время ниже порога: {_timeBelowThreshold} секунд");
     }
 
     private void Force()
