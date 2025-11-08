@@ -256,7 +256,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3295451445951211359}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4159458991532083077}
+        m_TargetAssemblyTypeName: InternetShopClassItem, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4153434753765105540
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,6 +576,7 @@ MonoBehaviour:
   Name: {fileID: 6267810045138548820}
   _iprice: {fileID: 8314947093635008517}
   Price: 0
+  id: 0
 --- !u!1 &8310626388739853577
 GameObject:
   m_ObjectHideFlags: 0
