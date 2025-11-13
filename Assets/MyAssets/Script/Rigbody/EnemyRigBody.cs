@@ -4,11 +4,13 @@ public class EnemyRigBody : MonoBehaviour
 {
     public int Health = 1;
 
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
-        PlayerController player = other.GetComponent<PlayerController>();
-        if (player != null)
-            return;
-        player.Health--;
+        if (Health > 0)
+        {
+            PlayerController player = other.gameObject.GetComponent<PlayerController>();
+            if (player == null) return;
+            player.TakeDamage(1);
+        }
     }
 }

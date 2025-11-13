@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public int Health;
+    [SerializeField]private float Health = 5;
+    [SerializeField] private int HealthMax = 5;
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
+    public Image HealthBar;
 
     private Rigidbody2D rb;
     private bool isGrounded = false;
@@ -12,6 +16,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        HealthMax = int.Parse(Health.ToString());
     }
 
     void Update()
@@ -35,5 +40,15 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
             isGrounded = false;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        Health -= damage;
+        HealthBar.fillAmount = Health /  HealthMax;
+        if (Health <= 0)
+        {
+            SceneManager.LoadScene(2);
+        }
     }
 }

@@ -2,16 +2,15 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            EnemyRigBody enemy =  other.GetComponent<EnemyRigBody>();
-            if (enemy == null)
-                return;
+            EnemyRigBody enemy =  collision.gameObject.GetComponent<EnemyRigBody>();
             enemy.Health--;
+            Destroy(this.gameObject);
         }
-        else if (other.gameObject.CompareTag("Ground"))
+        else if (collision.gameObject.CompareTag("Ground"))
         {
             Destroy(this.gameObject);
         }
