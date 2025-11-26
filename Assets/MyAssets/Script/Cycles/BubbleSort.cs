@@ -11,6 +11,10 @@ public class BubbleSort : MonoBehaviour
 
    private void SortBubble()
    {
+      foreach (GameObject bubble in _bubbleSort)
+      {
+         bubble.transform.position = new Vector3(bubble.transform.position.x, 0, 0);
+      }
       bool swapped;
       int i, j;
       for (i = 0; i < _bubbleSort.Count - 1; i++) {
